@@ -1,3 +1,15 @@
 spring:
   application:
     name: bonus
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/rssib_bonus}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
